@@ -20,14 +20,12 @@ class AssistantUI:
         self.client = OpenAI(api_key=api_key)
         
         # Hardcoded assistant and vector store IDs
-        self.ASSISTANT_ID = "asst_Qmoz7GL0UQRGnTpSvHUh1jrE"
-        self.VECTOR_STORE_ID = "vs_SbBbS2hVY0NMwpAp3IYHASpb"
+        self.ASSISTANT_ID = "asst_PvJQ9N7bAmAnrjeFjPVQ4tSY"
+        self.VECTOR_STORE_ID = "vs_ZFWYuuO03i2NRRqc1tb8yaJU"
         
         # Dictionary to store assistant names and IDs
         self.assistants = {
-            "ANWAR_IBRAHIM_PM": "asst_Qmoz7GL0UQRGnTpSvHUh1jrE",
-            "REFORMASI_ERA": "asst_tzadLKlr6MmeXffh2n1yWZuX", 
-            "MALAYSIA_MADANI": "asst_xxf55F2JbdteRsGw5m46FzUC", 
+            "PM_Anwar_Palestine_Rights": "asst_PvJQ9N7bAmAnrjeFjPVQ4tSY",
         }
 
         # Add translations dictionary
@@ -513,30 +511,14 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
 
         # Define specific configurations for each assistant
         assistant_configs = {
-            "ANWAR_IBRAHIM_PM": {
-                "name": "Anwar Ibrahim PM Analyst",
-                "vector_store": "vs_SbBbS2hVY0NMwpAp3IYHASpb",
+            "PM_Anwar_Palestine_Rights": {
+                "name": "PM Anwar Palestine Rights",
+                "vector_store": "vs_ZFWYuuO03i2NRRqc1tb8yaJU",
                 "additional_instructions": """Focus on analyzing Prime Minister Anwar Ibrahim's:
                     - Leadership and governance style
                     - Economic reforms and policies
                     - International relations
                     - MADANI Malaysia vision"""
-            },
-            "REFORMASI_ERA": {
-                "name": "Reformasi Era Analyst",
-                "vector_store": "vs_xRhPCdDkF8k3MF37rGreAI1I",
-                "additional_instructions": """Analyze the Reformasi movement and its impact on:
-                    - Malaysian political reform
-                    - Democratic development
-                    - Social change"""
-            },
-            "MALAYSIA_MADANI": {
-                "name": "Malaysia MADANI Analyst",
-                "vector_store": "vs_koy1fEQgl5ZIBRdrVx2mrR20",
-                "additional_instructions": """Analyze Malaysia MADANI focusing on:
-                    - Core principles and values
-                    - Implementation strategies
-                    - National development goals"""
             }
         }
 
@@ -709,9 +691,7 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
 
         # Define assistant IDs and their corresponding vector stores
         assistant_vector_stores = {
-            "ANWAR_IBRAHIM_PM": "vs_SbBbS2hVY0NMwpAp3IYHASpb",
-            "REFORMASI_ERA": "vs_xRhPCdDkF8k3MF37rGreAI1I", 
-            "MALAYSIA_MADANI": "vs_koy1fEQgl5ZIBRdrVx2mrR20"
+            "PM_Anwar_Palestine_Rights": "vs_ZFWYuuO03i2NRRqc1tb8yaJU",
         }
 
         # Initialize session state for tracking assistant changes
@@ -755,9 +735,7 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
 
         # Update assistant description display
         assistant_descriptions = {
-            "ANWAR_IBRAHIM_PM": "link here",
-            "REFORMASI_ERA": "link here",
-            "MALAYSIA_MADANI": "link here"
+            "PM_Anwar_Palestine_Rights": "link here",
         }
         st.markdown(f"<div class='assistant-info'>{assistant_descriptions.get(selected_assistant_name, '')}</div>", 
                     unsafe_allow_html=True)
@@ -853,8 +831,6 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
                     # Get file_id based on selected assistant
                     file_ids = {
                         "ANWAR_IBRAHIM_PM": "855112",
-                        "REFORMASI_ERA": "846082",
-                        "MALAYSIA_MADANI": "846083"
                     }
                     file_id = file_ids.get(selected_assistant_name)
                     
