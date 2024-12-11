@@ -25,7 +25,7 @@ class AssistantUI:
         
         # Dictionary to store assistant names and IDs
         self.assistants = {
-            "PM_Anwar_Palestine_Rights": "asst_PvJQ9N7bAmAnrjeFjPVQ4tSY",
+            "PM_Anwar_CNBC_Interview": "asst_PvJQ9N7bAmAnrjeFjPVQ4tSY",
         }
 
         # Add translations dictionary
@@ -511,7 +511,7 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
 
         # Define specific configurations for each assistant
         assistant_configs = {
-            "PM_Anwar_Palestine_Rights": {
+            "PM_Anwar_CNBC_Interview": {
                 "name": "PM Anwar Palestine Rights",
                 "vector_store": "vs_ZFWYuuO03i2NRRqc1tb8yaJU",
                 "additional_instructions": """Focus on analyzing Prime Minister Anwar Ibrahim's:
@@ -691,7 +691,7 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
 
         # Define assistant IDs and their corresponding vector stores
         assistant_vector_stores = {
-            "PM_Anwar_Palestine_Rights": "vs_ZFWYuuO03i2NRRqc1tb8yaJU",
+            "PM_Anwar_CNBC_Interview": "vs_ZFWYuuO03i2NRRqc1tb8yaJU",
         }
 
         # Initialize session state for tracking assistant changes
@@ -735,7 +735,7 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
 
         # Update assistant description display
         assistant_descriptions = {
-            "PM_Anwar_Palestine_Rights": "link here",
+            "PM_Anwar_CNBC_Interview": "https://f001.backblazeb2.com/file/Kiosk-ZoneTV-Proxy/B6646B96-173B-4996-839C-02C4FC66391B.MP4",
         }
         st.markdown(f"<div class='assistant-info'>{assistant_descriptions.get(selected_assistant_name, '')}</div>", 
                     unsafe_allow_html=True)
@@ -830,7 +830,7 @@ Remember: The primary goal is to provide precise, clean timestamps with accurate
                     
                     # Get file_id based on selected assistant
                     file_ids = {
-                        "ANWAR_IBRAHIM_PM": "855112",
+                        "ANWAR_IBRAHIM_PM": "920356",
                     }
                     file_id = file_ids.get(selected_assistant_name)
                     
